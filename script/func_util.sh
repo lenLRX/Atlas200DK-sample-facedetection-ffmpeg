@@ -4,6 +4,7 @@ script_path="$( cd "$(dirname ${BASH_SOURCE})" ; pwd -P )"
 remote_port="22118"
 DDK_BIN="$DDK_HOME/uihost/bin"
 tools_path="${script_path}/.."
+PROTOC="$DDK_HOME/bin/x86_64-linux-gcc5.4/protoc"
 
 function check_python3_lib()
 {
@@ -360,3 +361,64 @@ function check_ip_addr()
    return 0
 }
 
+# ************************is_proto_version_match********************************
+# Description:  check proto code file version is match with protoc version
+# $1: proto code head file
+# ******************************************************************************
+function is_proto_version_match()
+{
+    file=$1
+    if [ ! -f $file ];then
+        echo "Error: check proto version failed for $file is not exist"
+        return 0
+    fi
+
+    min_version=$(grep "PROTOBUF_VERSION" $file | awk -F ' ' '{print $4}' | sed 's/00/./g')
+    if [ -z "$min_version" ]; then
+        echo "Get min version from $file failed"
+        return 0
+    fi
+    
+    max_version=$(grep "PROTOBUF_MIN_PROTOC_VERSION" $file | awk -F ' ' '{print $2}' | sed 's/00/./g')
+    if [ -z "$max_version" ]; then
+        echo "Get max version from $file failed"
+        return 0
+    fi
+
+    protoc_version=$($PROTOC --version | awk -F ' ' '{print $2}')
+    if [ -z "$protoc_version" ]; then
+        echo "Get protoc version from $file failed"
+        return 0
+    fi
+
+    if [[ $protoc_version == $min_version ]] || [[ $protoc_version == $max_version ]] ||\
+       ([[ $protoc_version > $min_version ]] && [[ $protoc_version < $max_version ]]); then
+        return 1
+    fi
+    
+    return 0
+}	
+
+# ************************generate_proto_code***********************************
+# Description:  generate proto code by protoc
+# $1: proto file
+# ******************************************************************************
+function generate_proto_code()
+{
+    proto_file=$1
+
+    cur_dir=$(pwd)
+    proto_dir=$(dirname $proto_file)
+    filename=$(basename $proto_file)
+
+    cd $proto_dir
+	$PROTOC $filename --cpp_out=./
+    if [ $? -ne 0 ]
+    then
+        echo "ERROR: execute $PROTOC $proto_file --cpp_out=$proto_out_dir failed"
+        return 1
+    fi
+    cd $cur_dir
+
+    return 0
+}

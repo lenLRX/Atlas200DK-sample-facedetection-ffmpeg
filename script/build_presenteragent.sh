@@ -53,6 +53,30 @@ function build_presenteragent()
     fi
 }
 
+function check_proto_version()
+{
+
+    pb_h_file=${script_path}/presenteragent/proto/presenter_message.pb.h
+
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$DDK_HOME/lib/x86_64-linux-gcc5.4/"
+
+    is_proto_version_match $pb_h_file
+    if [ $? -eq 1 ];then
+        return 0
+    fi       
+
+    echo "The proto code does not match the protoc version, need regenerate code"
+    proto_file=${script_path}/presenteragent/proto/presenter_message.proto
+    generate_proto_code $proto_file
+    if [ $? -eq 1 ];then
+        echo "ERROR: regenerate proto code failed"
+        return 1
+    fi
+
+    echo "Regenerate proto code success"
+    return 0
+}
+
 main()
 {
     download_code
