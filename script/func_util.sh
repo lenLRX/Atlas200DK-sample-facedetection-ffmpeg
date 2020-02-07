@@ -422,3 +422,33 @@ function generate_proto_code()
 
     return 0
 }
+
+# ************************check_proto_version***********************************
+# Description:  check proto code version, regenerate if version not match
+# $1: proto head file
+# $2: proto file
+# ******************************************************************************
+function check_proto_version()
+{
+    pb_h_file=$1
+    proto_file=$2
+
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"$DDK_HOME/lib/x86_64-linux-gcc5.4/"
+
+    echo "check_proto_version $pb_h_file"
+    is_proto_version_match $pb_h_file
+	if [ $? -eq 1 ];then
+        echo "$pb_h_file match the protoc version"
+        return 0
+    fi       
+
+    echo "The proto code does not match the protoc version, need regenerate code"
+    generate_proto_code $proto_file
+    if [ $? -eq 1 ];then
+        echo "ERROR: regenerate proto code failed"
+        return 1
+    fi
+
+    echo "Regenerate proto code success"
+    return 0   
+}
