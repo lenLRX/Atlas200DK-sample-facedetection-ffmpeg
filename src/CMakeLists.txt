@@ -61,7 +61,7 @@ else()
     add_compile_options(-DCPU_ONLY)
 
     # add device lib path
-    link_directories($ENV{NPU_HOST_LIB} $ENV{HOME}/ascend_ddk/host/lib $ENV{HOME}/ascend_ddk/device/lib /home/HwHiAiUser/HIAI_PROJECTS/ascend_lib)
+    link_directories($ENV{NPU_DEV_LIB} $ENV{HOME}/ascend_ddk/host/lib $ENV{HOME}/ascend_ddk/device/lib /home/HwHiAiUser/HIAI_PROJECTS/ascend_lib)
 
     add_library(Device SHARED face_detection_inference/face_detection_inference.cpp)
 
