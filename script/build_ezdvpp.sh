@@ -37,6 +37,10 @@ function download_code()
 function build_ezdvpp()
 {
     echo "Build ezdvpp..."
+    if [ -e "${AGENT_PATH}/ezdvpp/out/libascend_ezdvpp.so" ];then
+        echo "EZdvpp so is found.."
+        return 0
+    fi
     make clean -C ${AGENT_PATH}/ezdvpp 1>/dev/null
     if [[ $? -ne 0 ]];then
         echo "ERROR: compile ezdvpp failed, please check the env."
