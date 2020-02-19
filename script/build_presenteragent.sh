@@ -42,6 +42,10 @@ function download_code()
 function build_presenteragent()
 {
     echo "Build presenteragent..."
+    if [ -e "${AGENT_PATH}/presenteragent/out/libpresenteragent.so" ];then
+        echo "Presenteragent so is found.."
+        return 0
+    fi
     make clean -C ${AGENT_PATH}/presenteragent 1>/dev/null 2>&1
     if [[ $? -ne 0 ]];then
         echo "ERROR: compile presenteragent failed, please check the env."
