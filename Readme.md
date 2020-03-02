@@ -11,14 +11,15 @@
 -   已完成Mind Studio的安装。
 -   已完成Atlas 200 DK开发者板与Mind Studio的连接，交叉编译器的安装，SD卡的制作及基本信息的配置等。
 
-## 快速部署<a name="zh-cn_topic_0203223294_section081240125311"></a>
+## 部署<a name="zh-cn_topic_0203223294_section081240125311"></a>
 
-1.  将 https://gitee.com/Atlas200DK/faster-depoly 仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/faster-depoly。
-2.  根据faster-depoly仓内的Readme部署facedetection样例。
-
+1.  部署，可以选择如下快速部署或者常规方法部署，二选一即可；
+1.1 快速部署，请参考：https://gitee.com/Atlas200DK/faster-depoly
 >![](public_sys-resources/icon-note.gif) **说明：**   
->-   已经下载运行过可以跳过此步骤。   
->-   此步为使用快速部署进行，精简了代码下载、模型转换、环境变量配置等流程，如果需要参考详细流程文档，可以访问：https://gitee.com/Atlas200DK/sample-README/tree/master/sample-facedetection。  
+>-   已经下载运行过可以跳过此步骤。  
+>-   此步为使用快速部署进行，精简了代码下载、模型转换、环境变量配置等流程，如果需要参考详细流程文档
+
+1.2 常规部署，请参考：https://gitee.com/Atlas200DK/sample-README/tree/master/sample-facedetection
 
 ## 编译<a name="zh-cn_topic_0203223294_section7994174585917"></a>
 
