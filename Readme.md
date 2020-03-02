@@ -15,7 +15,7 @@
 
 1.  部署，可以选择如下快速部署或者常规方法部署，二选一即可；
 
-    1.1 快速部署，请参考：https://gitee.com/Atlas200DK/faster-depoly
+    1.1 快速部署，请参考：https://gitee.com/Atlas200DK/faster-deploy
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >-   已经下载运行过可以跳过此步骤。  
