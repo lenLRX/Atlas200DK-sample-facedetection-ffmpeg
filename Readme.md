@@ -13,7 +13,11 @@
 
 ## 快速部署<a name="zh-cn_topic_0203223294_section081240125311"></a>
 
+1.  将https://gitee.com/Atlas200DK/faster-depoly仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/faster-depoly。
+2.  根据faster-depoly仓内的Readme部署facedetection样例。
 
+>![](public_sys-resources/icon-note.gif) **说明：**   
+>-   已经下载运行过可以跳过此步骤。   
 
 ## 编译<a name="zh-cn_topic_0203223294_section7994174585917"></a>
 
@@ -65,7 +69,8 @@
 
 3. 执行deploy脚本， 进行配置参数调整及第三方库下载编译
     打开Mind Studio工具的Terminal，此时默认在[步骤1](#zh-cn_topic_0203223294_li953280133816)中的代码存放路径下，执行如下命令在后台指执行deploy脚本，进行环境部署。如[图 执行depoly脚本](#zh-cn_topic_0203223294_fig423515251038)所示。
-    **图 8**  编译操作及生成文件<a name="zh-cn_topic_0203223294_fig4235152510387"></a>  
+    
+    **图 8**  执行depoly脚本<a name="zh-cn_topic_0203223294_fig4235152510387"></a>  
     
     ![](figures/depoly.png)
     
