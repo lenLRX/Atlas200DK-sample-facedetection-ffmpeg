@@ -75,7 +75,7 @@
     >-   注意参数填写时不需要使用“”符号。  
 
 3. 执行deploy脚本， 进行配置参数调整及第三方库下载编译
-    打开Mind Studio工具的Terminal，此时默认在[步骤1](#zh-cn_topic_0203223294_li953280133816)中的代码存放路径下，执行如下命令在后台指执行deploy脚本，进行环境部署。如[图 执行deploy脚本](#zh-cn_topic_0203223294_fig423515251038)所示。
+    打开Mind Studio工具的Terminal，此时默认在代码主目录下，执行如下命令在后台指执行deploy脚本，进行环境部署。如[图 执行deploy脚本](#zh-cn_topic_0203223294_fig423515251038)所示。
     
     **图 8**  执行deploy脚本<a name="zh-cn_topic_0203223294_fig4235152510387"></a>  
     
@@ -97,7 +97,7 @@
 
 4.  <a name="zh-cn_topic_0203223294_li499911453439"></a>启动Presenter Server。
 
-    打开Mind Studio工具的Terminal，此时默认在[步骤1](#zh-cn_topic_0203223294_li953280133816)中的代码存放路径下，执行如下命令在后台启动Face Detection应用的Presenter Server主程序。如[图 启动PresenterServer](#zh-cn_topic_0203223294_fig423515251067)所示。
+    打开Mind Studio工具的Terminal，此时默认在代码主目录下，执行如下命令在后台启动Face Detection应用的Presenter Server主程序。如[图 启动PresenterServer](#zh-cn_topic_0203223294_fig423515251067)所示。
 
     **bash run\_present\_server.sh**
 
