@@ -13,7 +13,7 @@
 
 ## 快速部署<a name="zh-cn_topic_0203223294_section081240125311"></a>
 
-1.  将https://gitee.com/Atlas200DK/faster-depoly仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/faster-depoly。
+1.  将 https://gitee.com/Atlas200DK/faster-depoly 仓中的代码以Mind Studio安装用户下载至Mind Studio所在Ubuntu服务器的任意目录，例如代码存放路径为：$HOME/faster-depoly。
 2.  根据faster-depoly仓内的Readme部署facedetection样例。
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
