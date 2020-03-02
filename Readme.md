@@ -18,6 +18,7 @@
 
 >![](public_sys-resources/icon-note.gif) **说明：**   
 >-   已经下载运行过可以跳过此步骤。   
+>-   此步为使用快速部署进行，精简了代码下载、模型转换、环境变量配置等流程，如果需要参考详细流程文档，可以访问：https://gitee.com/Atlas200DK/sample-README/tree/master/sample-facedetection。  
 
 ## 编译<a name="zh-cn_topic_0203223294_section7994174585917"></a>
 
