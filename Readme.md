@@ -69,11 +69,11 @@
     >-   注意参数填写时不需要使用“”符号。  
 
 3. 执行deploy脚本， 进行配置参数调整及第三方库下载编译
-    打开Mind Studio工具的Terminal，此时默认在[步骤1](#zh-cn_topic_0203223294_li953280133816)中的代码存放路径下，执行如下命令在后台指执行deploy脚本，进行环境部署。如[图 执行depoly脚本](#zh-cn_topic_0203223294_fig423515251038)所示。
+    打开Mind Studio工具的Terminal，此时默认在[步骤1](#zh-cn_topic_0203223294_li953280133816)中的代码存放路径下，执行如下命令在后台指执行deploy脚本，进行环境部署。如[图 执行deploy脚本](#zh-cn_topic_0203223294_fig423515251038)所示。
     
-    **图 8**  执行depoly脚本<a name="zh-cn_topic_0203223294_fig4235152510387"></a>  
+    **图 8**  执行deploy脚本<a name="zh-cn_topic_0203223294_fig4235152510387"></a>  
     
-    ![](figures/depoly.png)
+    ![](figures/deploy.png)
     
     >![](public_sys-resources/icon-note.gif) **说明：**   
     >-   depoly时，需要选择与开发板通信的主机侧ip，一般为虚拟网卡配置的ip。如果此ip和开发板ip属于同网段，则会自动选择并部署。如果非同网段，则需要手动输入与开发板通信的主机侧ip才能完成deploy。
