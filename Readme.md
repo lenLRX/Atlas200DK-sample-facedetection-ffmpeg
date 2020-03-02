@@ -18,10 +18,13 @@
     1.1 快速部署，请参考：https://gitee.com/Atlas200DK/faster-deploy
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   已经下载运行过可以跳过此步骤。  
-    >-   此步为使用快速部署进行，精简了代码下载、模型转换、环境变量配置等流程，如果需要参考详细流程文档请按照1.2进行常规部署
+    >-   该快速部署脚本可以快速部署多个案例，请选择人脸检测案例部署即可。  
+    >-   该快速部署脚本自动完成了代码下载、模型转换、环境变量配置等流程，如果需要了解详细的部署过程请选择常规部署方式，请转**1.2 常规部署**。
 
     1.2 常规部署，请参考：https://gitee.com/Atlas200DK/sample-README/tree/master/sample-facedetection
+
+    >![](public_sys-resources/icon-note.gif) **说明：**   
+    >-   该部署方式，需要手动完成代码下载、模型转换、环境变量配置等过程。完成后，会对其中的过程会更加了解。。
  
 ## 编译<a name="zh-cn_topic_0203223294_section7994174585917"></a>
 
