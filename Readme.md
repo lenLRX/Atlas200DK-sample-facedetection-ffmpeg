@@ -36,7 +36,7 @@
 
     启动成功后，打开**sample-facedetection**工程，如[图 打开facedetection工程](#zh-cn_topic_0203223294_fig05481157171918)所示。
 
-    **图 6**  打开facedetection工程<a name="zh-cn_topic_0203223294_fig05481157171918"></a>  
+    **图 1**  打开facedetection工程<a name="zh-cn_topic_0203223294_fig05481157171918"></a>  
     
 
     ![](figures/打开工程项目-人脸检测.png)
@@ -45,7 +45,7 @@
 
     如[图 配置文件路径](#zh-cn_topic_0203223294_fig0391184062214)所示。
 
-    **图 7**  配置文件<a name="zh-cn_topic_0203223294_fig0391184062214"></a>  
+    **图 2**  配置文件<a name="zh-cn_topic_0203223294_fig0391184062214"></a>  
     
 
     ![](figures/face_detection_src.png)
@@ -77,16 +77,16 @@
 3. 执行deploy脚本， 进行配置参数调整及第三方库下载编译
     打开Mind Studio工具的Terminal，此时默认在代码主目录下，执行如下命令在后台指执行deploy脚本，进行环境部署。如[图 执行deploy脚本](#zh-cn_topic_0203223294_fig423515251038)所示。
     
-    **图 8**  执行deploy脚本<a name="zh-cn_topic_0203223294_fig4235152510387"></a>  
+    **图 3**  执行deploy脚本<a name="zh-cn_topic_0203223294_fig4235152510387"></a>  
     
     ![](figures/deploy.png)
     
     >![](public_sys-resources/icon-note.gif) **说明：**   
-    >-   depoly时，需要选择与开发板通信的主机侧ip，一般为虚拟网卡配置的ip。如果此ip和开发板ip属于同网段，则会自动选择并部署。如果非同网段，则需要手动输入与开发板通信的主机侧ip才能完成deploy。
+    >-   deploy时，需要选择与开发板通信的主机侧ip，一般为虚拟网卡配置的ip。如果此ip和开发板ip属于同网段，则会自动选择并部署。如果非同网段，则需要手动输入与开发板通信的主机侧ip才能完成deploy。
 
 4. 开始编译，打开Mindstudio工具，在工具栏中点击**Build \> Build \> Build-Configuration**。如[图 编译操作及生成文件](#zh-cn_topic_0203223294_fig1625447397)所示，会在目录下生成build和run文件夹。
 
-    **图 9**  编译操作及生成文件<a name="zh-cn_topic_0203223294_fig1625447397"></a>  
+    **图 4**  编译操作及生成文件<a name="zh-cn_topic_0203223294_fig1625447397"></a>  
     
 
     ![](figures/face_detection_build.png)
@@ -101,7 +101,7 @@
 
     **bash run\_present\_server.sh**
 
-    **图 10**  启动PresenterServer<a name="zh-cn_topic_0203223294_fig423515251067"></a>  
+    **图 5**  启动PresenterServer<a name="zh-cn_topic_0203223294_fig423515251067"></a>  
     
 
     ![](figures/face_detection_presentserver1.png)
@@ -110,26 +110,26 @@
 
     如[图 工程部署示意图](#zh-cn_topic_0203223294_fig999812514814)所示，请在“**Current environment valid ip list**”中选择通过浏览器访问Presenter Server服务使用的IP地址。
 
-    **图 11**  工程部署示意图<a name="zh-cn_topic_0203223294_fig999812514814"></a>  
+    **图 6**  工程部署示意图<a name="zh-cn_topic_0203223294_fig999812514814"></a>  
     
 
     ![](figures/face_detection_presentserver2.png)
 
     如[图11](#zh-cn_topic_0203223294_fig69531305324)所示，表示presenter\_server的服务启动成功。
 
-    **图 12**  Presenter Server进程启动<a name="zh-cn_topic_0203223294_fig69531305324"></a>  
+    **图 7**  Presenter Server进程启动<a name="zh-cn_topic_0203223294_fig69531305324"></a>  
     
 
     ![](figures/face_detection_presentserver3.png)
 
     使用上图提示的URL登录Presenter Server，仅支持Chrome浏览器。IP地址为[图 工程部署示意图](#zh-cn_topic_0203223294_fig999812514814)操作时输入的IP地址，端口号默为7007，如下图所示，表示Presenter Server启动成功。
 
-    **图 13**  主页显示<a name="zh-cn_topic_0203223294_fig64391558352"></a>  
+    **图 8**  主页显示<a name="zh-cn_topic_0203223294_fig64391558352"></a>  
     ![](figures/主页显示.png "主页显示")
 
     Presenter Server、Mind Studio与Atlas 200 DK之间通信使用的IP地址示例如下图所示：
 
-    **图 14**  IP地址示例<a name="zh-cn_topic_0203223294_fig1881532172010"></a>  
+    **图 9**  IP地址示例<a name="zh-cn_topic_0203223294_fig1881532172010"></a>  
     ![](figures/IP地址示例.png "IP地址示例")
 
     其中：
@@ -145,16 +145,16 @@
 
     在Mind Studio工具的工具栏中找到Run按钮，点击**Run \> Run 'sample-facedetection'**，如[图 程序已执行示意图](#zh-cn_topic_0203223294_fig93931954162719)所示，可执行程序已经在开发者板运行。
 
-    **图 15**  程序运行示例<a name="zh-cn_topic_0203223294_fig93931954162719"></a>  
+    **图 10**  程序运行示例<a name="zh-cn_topic_0203223294_fig93931954162719"></a>  
     
 
     ![](figures/face_detection_run.png)
 
 2.  使用启动Presenter Server服务时提示的URL登录 Presenter Server 网站，详细可参考[启动Presenter Server](#zh-cn_topic_0203223294_li499911453439)。
 
-    等待Presenter Agent传输数据给服务端，单击“Refresh“刷新，当有数据时相应的Channel 的Status变成绿色，如[图15](#zh-cn_topic_0203223294_fig113691556202312)所示。
+    等待Presenter Agent传输数据给服务端，单击“Refresh“刷新，当有数据时相应的Channel 的Status变成绿色，如[图11](#zh-cn_topic_0203223294_fig113691556202312)所示。
 
-    **图 16**  Presenter Server界面<a name="zh-cn_topic_0203223294_fig113691556202312"></a>  
+    **图 11**  Presenter Server界面<a name="zh-cn_topic_0203223294_fig113691556202312"></a>  
     ![](figures/Presenter-Server界面.png "Presenter-Server界面")
 
     >![](public_sys-resources/icon-note.gif) **说明：**   
@@ -171,14 +171,14 @@
 
     单击[图 停止Face Detection应用](#zh-cn_topic_0203223294_fig14326454172518)所示的停止按钮停止Face Detection应用程序。
 
-    **图 17**  停止Face Detection应用<a name="zh-cn_topic_0203223294_fig14326454172518"></a>  
+    **图 12**  停止Face Detection应用<a name="zh-cn_topic_0203223294_fig14326454172518"></a>  
     
 
     ![](figures/face_detection_stopping.png)
 
     如[图 Face Detection应用已停止](#zh-cn_topic_0203223294_fig2182182518112)所示应用程序已停止运行
 
-    **图 18**  Face Detection应用已停止<a name="zh-cn_topic_0203223294_fig2182182518112"></a>  
+    **图 13**  Face Detection应用已停止<a name="zh-cn_topic_0203223294_fig2182182518112"></a>  
     
 
     ![](figures/face_detection_stoped.png)
