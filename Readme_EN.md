@@ -96,7 +96,7 @@ You can use either of the following methods:
     >![](public_sys-resources/icon-notice.gif) **NOTICE:**   
     >When you build a project for the first time,  **Build \> Build**  is unavailable. You need to choose  **Build \> Edit Build Configuration**  to set parameters before the build.  
 
-5.  Start Presenter Server.
+5.  Start Presenter Server.<a name="en-us_topic_0203223294_fig423515252222"></a>  
 
     Open the  **Terminal**  window of Mind Studio. Under the code storage path, run the following command to start the Presenter Server program of the face detection application on the server, as shown in  [Figure 5](#en-us_topic_0203223294_fig423515251067):
 
@@ -151,7 +151,7 @@ You can use either of the following methods:
 
     ![](figures/face_detection_run.png)
 
-2.  Use the URL displayed upon the start of the Presenter Server service to log in to Presenter Server. For details, see  [Start Presenter Server](en-us_topic_0203223294.md#li499911453439).
+2.  Use the URL displayed upon the start of the Presenter Server service to log in to Presenter Server. For details, see  [Start Presenter Server](#en-us_topic_0203223294_fig423515252222).
 
     Wait for Presenter Agent to transmit data to the server. Click  **Refresh**. When there is data, the icon in the  **Status**  column for the corresponding channel changes to green, as shown in the following figure.
 
