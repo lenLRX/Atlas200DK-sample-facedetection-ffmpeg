@@ -1,3 +1,5 @@
+English|[中文](Readme.md)
+
 # Face Detection<a name="EN-US_TOPIC_0228461904"></a>
 
 You can deploy this application on the Atlas 200 DK to collect camera data in real time and predict facial information in the video.
