@@ -102,7 +102,7 @@ int main(int argc, char* argv[])
     engine_id.port_id = 0;
     std::shared_ptr<std::string> src_data(new std::string);
     graph->SendData(engine_id, "string", std::static_pointer_cast<void>(src_data));
-	for (;;)
+	for (int i = 0;;++i)
     {
         if(flag <= 0)
         {

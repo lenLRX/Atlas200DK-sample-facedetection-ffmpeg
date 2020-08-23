@@ -44,6 +44,7 @@
 #include "hiaiengine/data_type.h"
 #include "hiaiengine/data_type_reg.h"
 #include "face_detection_params.h"
+#include "ffmpeg_stream.h"
 
 #define CAMERAL_1 (0)
 #define CAMERAL_2 (1)
@@ -185,6 +186,8 @@ private:
   // ret of cameradataset
   int exit_flag_;
   uint32_t frame_id_;
+
+  FFMPEGContext ffmpeg_ctx;
 
 };
 

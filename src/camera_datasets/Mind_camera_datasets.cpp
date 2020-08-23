@@ -47,7 +47,11 @@
 #include "hiaiengine/log.h"
 extern "C" {
 #include "driver/peripheral_api.h"
+#include "libavformat/avformat.h"
+#include "libavcodec/avcodec.h"
 }
+
+#include "ffmpeg_stream.h"
 
 namespace {
 // initial value of frameId
@@ -118,7 +122,8 @@ HIAI_StatusT Mind_CameraDatasets::Init(
     HIAI_ENGINE_LOG(msg.data());
     ret = HIAI_ERROR;
   }
-
+  HIAI_ENGINE_LOG("[CameraDatasets] init ffmpeg!");
+  ffmpeg_ctx.Init();
   HIAI_ENGINE_LOG("[CameraDatasets] end init!");
   return ret;
 }
@@ -316,6 +321,8 @@ bool Mind_CameraDatasets::DoCapProcess() {
                       (int) pimg_data->img.size);
       break;
     }
+
+    ffmpeg_ctx.SendFrame(pdata);
 
     hiai_ret = SendData(0, "BatchImageParaWithScaleT",
                         static_pointer_cast<void>(pobj));

@@ -15,7 +15,8 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY  "../../outputs")
 set(CMAKE_INSTALL_PREFIX "../../../run")
 set(CMAKE_OUTPUT_DIR "out")
 
-set(CMAKE_CXX_FLAGS_RELEASE "-fPIC -O2 -Wall")
+#set(CMAKE_CXX_FLAGS_RELEASE "-fPIC -O2 -Wall")
+set(CMAKE_CXX_FLAGS_RELEASE "-fPIC -g -gdb -Wall")
 
 #execute_process(COMMAND bash ../../../script/deploy.sh RESULT_VARIABLE ret)
 #IF(${ret})
@@ -30,6 +31,7 @@ $ENV{DDK_PATH}/include/inc/
 $ENV{DDK_PATH}/include/third_party/protobuf/include
 $ENV{DDK_PATH}/include/third_party/cereal/include
 $ENV{DDK_PATH}/include/libc_sec/include
+/home/len/ffmpeg_build/include
 
 $ENV{HOME}/ascend_ddk/include
 
@@ -44,13 +46,18 @@ if(type STREQUAL host)
     # add host lib path
     link_directories($ENV{NPU_HOST_LIB} $ENV{HOME}/ascend_ddk/host/lib $ENV{HOME}/ascend_ddk/device/lib /home/HwHiAiUser/HIAI_PROJECTS/ascend_lib)
     set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+    link_directories(/home/len/ffmpeg_build/lib)
 
     add_executable(main Main.cpp)
-    add_library(Host SHARED camera_datasets/Mind_camera_datasets.cpp face_detection_post_process/face_detection_post_process.cpp)
+    add_library(Host SHARED
+     camera_datasets/Mind_camera_datasets.cpp
+     camera_datasets/ffmpeg_stream.cpp
+     face_detection_post_process/face_detection_post_process.cpp)
 
     if(target STREQUAL "RC")
         target_link_libraries(main matrixdaemon mmpa pthread dl rt)
         target_link_libraries(Host matrixdaemon hiai_common media_mini presenteragent)
+        target_link_libraries(Host avformat avutil avcodec)
     else()
         target_link_libraries(main matrix mmpa pthread dl rt)
         target_link_libraries(Host matrix hiai_common)
